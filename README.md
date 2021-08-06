@@ -17,6 +17,11 @@ sdk.get_media_data(sdkfileid)
 ```
 
 
+## 参考文档
+
+[Python ctypes](https://docs.python.org/3.9/library/ctypes.html)
+
+
 ## 依赖
 
 [PyCryptodome](https://pycryptodome.readthedocs.io/en/latest/)
