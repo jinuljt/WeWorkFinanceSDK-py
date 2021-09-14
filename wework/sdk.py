@@ -34,7 +34,7 @@ class Media(Structure):
 class WeWorkFinanceSDK:
     dll = None
     sdk = None
-    ciphers = []
+    ciphers = None
 
     def __init__(self, corp_id, corp_secret, private_keys):
         """
@@ -44,6 +44,7 @@ class WeWorkFinanceSDK:
         :param corp_secret: 企业回话内容存档密钥
         :param private_keys: 私钥列表，按照版本顺序提供。没有则填None。['version 1 rsa private key data', None, 'version 2']
         """
+        self.ciphers = []
         for index, private_key in enumerate(private_keys, 1):
             if not private_key:
                 logger.info(f"private key version {index} not found! ignore")
